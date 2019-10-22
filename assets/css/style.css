@@ -1,0 +1,15 @@
+
+.gameheader {
+    position: absolute;
+    left: 17%;
+    top: -5px;
+    background-color: black;
+    color: red;
+    text-align: center;
+    font-size: 20px;
+    margin: 0px;
+}
+#card-text {
+    color: black;
+}
+

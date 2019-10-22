@@ -1,0 +1,89 @@
+<!--                           Crystal Collector Game-->
+            <!--Psuedocode-->
+<!--1. Create HTML layout-->
+    <!--a. Game Title (top of page).-->
+    <!--b. Directions/Instructions-->
+    <!--c. Player Score-->
+    <!--d. Player wins/losses.-->
+    <!--e. Crystal images (x4)-->
+        <!-- Act like buttons-->
+    <!--f. Player current score-->
+
+    <!DOCTYPE html>
+    <html lang="en">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <head>
+            <link rel="stylesheet"type="text/css" href="assets/css/reset.css">
+            <link rel="stylesheet"type="text/css" href="assets/css/style.css">
+        <link rel="stylesheet" 
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" 
+        crossorigin="anonymous">
+    </head>
+    <body>
+            <div class="gameheader">
+                <style>
+                    body   {
+                        background-image:url("assets/images/crystalmine.jpg");
+                        background-repeat:no repeat;
+                        background-size:cover;
+                    }
+                </style>
+                    <h1 class="display-4">Welcome to the Crystal Collector Game!!</h1>
+                    <p class="lead">Directions:</p>
+                    <p1>1. Using the colored gems below achieve the required score.</p1><br>
+                    <p1>2. Values will be hidden until the crystal is clicked.</p1><br>
+                    <p1>3. Player wins/losses will be tracked until webpage is reset.</p1><br>
+                    <hr class="cancel">
+                    <p1>Click 'Cancel' to exit game and see the latest scores.</p1><br>
+                    <a class="btn btn-danger btn-lg " href="https://www.espn.com/" role="button">Cancel</a>
+                  </div>
+
+    <container3 class = "container3">
+                    <!-- Player input-->
+        <div class = "row">
+            <div class="col-md-2">
+                    <div class="card" style="width: 10rem;">
+                            <img src="assets/images/bluegem.jpg" class="card-img-top" alt="blugem">
+                            <div class="card-body">
+                              <h5 class="card-title">Blue Gem</h5>
+                              <p class="card-text"></p>
+                            </div>
+                    </div>
+                    <div class="card" style="width: 10rem;">
+                            <img src="assets/images/greengem.jpg" class="card-img-top" alt="blugem">
+                            <div class="card-body">
+                              <h5 class="card-title">Green Gem</h5>
+                              <div id = "card-text-green">
+                              </div>
+                            </div>
+                    </div>
+            </div>
+            <div class="col-md-8">
+
+            </div>
+
+            <div class="col-md-2">
+                    <div class="card" style="width: 10rem;">
+                            <img src="assets/images/purplegem.jpg" class="card-img-top" alt="blugem">
+                            <div class="card-body">
+                              <h5 class="card-title">Purple Gem</h5>
+                              <p class="card-text"></p>
+                            </div>
+                    </div>
+                    <div class="card" style="width: 10rem;">
+                            <img src="assets/images/whitegem.jpg" class="card-img-top" alt="blugem">
+                            <div class="card-body">
+                              <h5 class="card-title">White Gem</h5>
+                              <p class="card-text"></p>
+                            </div>
+                    </div>
+            </div>
+        </div>
+            
+    </container3>
+        </body>
+
+    </html>
+
