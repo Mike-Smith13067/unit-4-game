@@ -1,7 +1,7 @@
 
 .gameheader {
     position: absolute;
-    left: 17%;
+    left: 19%;
     top: -5px;
     background-color: black;
     color: red;
@@ -9,7 +9,46 @@
     font-size: 20px;
     margin: 0px;
 }
-#card-text {
-    color: black;
+
+.card-img-top {
+    height: 200px;
+    width: 450px;
 }
+
+.card-img-top-blue {
+    height: 200px;
+    width: 250px;
+}
+
+.card-img-top-purple {
+    height: 200px;
+    width: 450px;
+}
+
+.card-img-top-green {
+    height: 200px;
+    width: 250px;
+}
+
+.card-img-top-white {
+    height: 200px;
+    width: 250px;
+}
+
+.card-body {
+    position: relative;
+    background-color: white;
+    width: 250px;
+    border: 5px solid black;
+
+}
+.card-body-score{
+    position: relative;
+    left: 40%;
+    background-color: white;
+    width: 250px;
+    border: 5px solid black;
+}
+
+.card-title {}
 

@@ -1,15 +1,5 @@
 <!--                           Crystal Collector Game-->
-            <!--Psuedocode-->
-<!--1. Create HTML layout-->
-    <!--a. Game Title (top of page).-->
-    <!--b. Directions/Instructions-->
-    <!--c. Player Score-->
-    <!--d. Player wins/losses.-->
-    <!--e. Crystal images (x4)-->
-        <!-- Act like buttons-->
-    <!--f. Player current score-->
-
-    <!DOCTYPE html>
+<!DOCTYPE html>
     <html lang="en">
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -20,7 +10,11 @@
         href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" 
         crossorigin="anonymous">
+
     </head>
+            <!--Psuedocode-->
+<!--1. Create HTML layout-->
+    <!--a. Game Title (top of page).-->
     <body>
             <div class="gameheader">
                 <style>
@@ -31,34 +25,35 @@
                     }
                 </style>
                     <h1 class="display-4">Welcome to the Crystal Collector Game!!</h1>
+                    <!--b. Directions/Instructions-->
                     <p class="lead">Directions:</p>
                     <p1>1. Using the colored gems below achieve the required score.</p1><br>
-                    <p1>2. Values will be hidden until the crystal is clicked.</p1><br>
+                    <p1>2. Random values will be assigned one the crystal is clicked.</p1><br>
                     <p1>3. Player wins/losses will be tracked until webpage is reset.</p1><br>
                     <hr class="cancel">
                     <p1>Click 'Cancel' to exit game and see the latest scores.</p1><br>
                     <a class="btn btn-danger btn-lg " href="https://www.espn.com/" role="button">Cancel</a>
-                  </div>
-
-    <container3 class = "container3">
-                    <!-- Player input-->
+                  </div>    
+    
+    <!--e. Crystal images (x4)-->
+        <!-- Act like buttons-->
+    <container1 class = "container1">
         <div class = "row">
             <div class="col-md-2">
-                    <div class="card" style="width: 10rem;">
-                            <img src="assets/images/bluegem.jpg" class="card-img-top" alt="blugem">
-                            <div class="card-body">
-                              <h5 class="card-title">Blue Gem</h5>
-                              <p class="card-text"></p>
-                            </div>
-                    </div>
-                    <div class="card" style="width: 10rem;">
-                            <img src="assets/images/greengem.jpg" class="card-img-top" alt="blugem">
-                            <div class="card-body">
-                              <h5 class="card-title">Green Gem</h5>
-                              <div id = "card-text-green">
-                              </div>
-                            </div>
-                    </div>
+                <div class="card" style="width: 12rem;">
+                    <img src="assets/images/bluegem.jpg" id = blue-btn class="card-img-top-blue" alt="bluegem">
+                        <div class="card-body">
+                            <h5 class="card-title">Blue Gem:</h5>
+                            <div id ="card-text-blue"></div>
+                        </div>
+                </div>
+                <div class="card" style="width: 10rem;">
+                    <img src="assets/images/greengem.jpg" id = green-btn class="card-img-top-green" alt="greengem">
+                        <div class="card-body">
+                            <h5 class="card-title">Green Gem:</h5>
+                            <div id = "card-text-green"></div>
+                        </div>
+                </div>
             </div>
             <div class="col-md-8">
 
@@ -66,24 +61,56 @@
 
             <div class="col-md-2">
                     <div class="card" style="width: 10rem;">
-                            <img src="assets/images/purplegem.jpg" class="card-img-top" alt="blugem">
+                            <img src="assets/images/purplegem.jpg" id = purple-btn class="card-img-top-purple" alt="purplegem">
                             <div class="card-body">
-                              <h5 class="card-title">Purple Gem</h5>
-                              <p class="card-text"></p>
+                              <h5 class="card-title">Purple Gem:</h5>
+                              <div id ="card-text-purple"></div>
                             </div>
                     </div>
                     <div class="card" style="width: 10rem;">
-                            <img src="assets/images/whitegem.jpg" class="card-img-top" alt="blugem">
+                            <img src="assets/images/whitegem.jpg" id = white-btn class="card-img-top-white" alt="whitegem">
                             <div class="card-body">
-                              <h5 class="card-title">White Gem</h5>
-                              <p class="card-text"></p>
+                              <h5 class="card-title">White Gem:</h5>
+                              <div id ="card-text-white"></div>
                             </div>
                     </div>
             </div>
         </div>
-            
-    </container3>
+
+    </container1>
+    <container2>    
+
+        <!--c. Player Score-->
+        <div class = "row">
+            <div class = "col-md-2">
+                    <div class="card-body">
+                            <h5 class="card-title">Player Wins:</h5>
+                            <p class="card-text"></p>
+                        <div id = "playerWins"></div></div>
+            </div>
+            <div class = "col-md-8">
+                    <div class="card-body-score">
+                            <h5 class="card-title">Player Score: </h5>
+                            <p class="card-text">.</p></div>
+                        <div id = "playerScore"></div>
+            </div>
+            <div class = "col-md-2">
+                    <div class="card-body">
+                            <h5 class="card-title">Player Losses: </h5>
+                            <p class="card-text">.</p></div>
+                    </div>
+                    <div id = "playerScore"></div>
+            </div>
+        </div>
+            <!--d. Player wins/losses.-->
+
+    <!--f. Player current score-->
+
+    </container2>
+
+    <script src="assets/javascript/game.js"></script>
         </body>
+        
 
     </html>
 
