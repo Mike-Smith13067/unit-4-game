@@ -27,12 +27,12 @@
         document.getElementById ("card-text-green").textContent="Current Value: " + greenGem;
     //b. Player score.
     var playerScore = 0;
-    document.getElementById ("playerScore").textContent="" + playerScore;
+    document.getElementById ("playerScore").textContent="Currrent Score: " + playerScore;
     //c. Player wins/losses.
     var playerWins = 0;
-    document.getElementById ("playerScore").textContent="" + playerWins;
+    document.getElementById ("playerWins").textContent="Player Wins: " + playerWins;
     var playerLosses = 0;
-    document.getElementById ("playerScore").textContent="" + playerLosses;
+    document.getElementById ("playerLosses").textContent="Player Losses: " + playerLosses;
     //d. Target value to be guessed.
         // Randomly generated between 19-120
         // Resets to new value at game start
