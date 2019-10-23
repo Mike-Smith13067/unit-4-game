@@ -3,13 +3,15 @@
     <html lang="en">
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <head>
-            <link rel="stylesheet"type="text/css" href="assets/css/reset.css">
-            <link rel="stylesheet"type="text/css" href="assets/css/style.css">
-        <link rel="stylesheet" 
+<head>
+    <link rel="stylesheet"type="text/css" href="assets/css/reset.css">
+    <link rel="stylesheet"type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" 
         href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" 
         crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery.js"></script>
+
 
     </head>
             <!--Psuedocode-->
@@ -31,7 +33,7 @@
                     <p1>2. Random values will be assigned one the crystal is clicked.</p1><br>
                     <p1>3. Player wins/losses will be tracked until webpage is reset.</p1><br>
                     <hr class="cancel">
-                    <p1>Click 'Cancel' to exit game and see the latest scores.</p1><br>
+                    <p1>Click 'Cancel' to exit game and see the latest sports news.</p1><br>
                     <a class="btn btn-danger btn-lg " href="https://www.espn.com/" role="button">Cancel</a>
                   </div>    
     
@@ -40,17 +42,17 @@
     <container1 class = "container1">
         <div class = "row">
             <div class="col-md-2">
-                <div class="card" style="width: 12rem;">
-                    <img src="assets/images/bluegem.jpg" id = blue-btn class="card-img-top-blue" alt="bluegem">
+                <div class="card" style="width: 10rem;">
+                    <img src="assets/images/bluegem.jpg"  class="card-img-top-blue" alt="bluegem">
                         <div class="card-body">
-                            <h5 class="card-title">Blue Gem:</h5>
-                            <div id ="card-text-blue"></div>
+                            <h5 class="card-title"><button type="button" class="btn btn-primary" id = "blue-btn">Blue Gem:</button></h5>
+                            <div id ="card-text-blue" ></div>
                         </div>
                 </div>
                 <div class="card" style="width: 10rem;">
-                    <img src="assets/images/greengem.jpg" id = green-btn class="card-img-top-green" alt="greengem">
+                    <img src="assets/images/greengem.jpg"  class="card-img-top-green" alt="greengem">
                         <div class="card-body">
-                            <h5 class="card-title">Green Gem:</h5>
+                            <h5 class="card-title"><button type="button" class="btn btn-success" id = "green-btn">Green Gem:</button></h5>
                             <div id = "card-text-green"></div>
                         </div>
                 </div>
@@ -61,16 +63,16 @@
 
             <div class="col-md-2">
                     <div class="card" style="width: 10rem;">
-                            <img src="assets/images/purplegem.jpg" id = purple-btn class="card-img-top-purple" alt="purplegem">
+                            <img src="assets/images/yellowgem.jpg"  class="card-img-top-purple" alt="yellowgem">
                             <div class="card-body">
-                              <h5 class="card-title">Purple Gem:</h5>
-                              <div id ="card-text-purple"></div>
+                              <h5 class="card-title"><button type="button" class="btn btn-warning" id = "yellow-btn">Yellow Gem:</button></h5>
+                              <div id ="card-text-yellow"></div>
                             </div>
                     </div>
                     <div class="card" style="width: 10rem;">
-                            <img src="assets/images/whitegem.jpg" id = white-btn class="card-img-top-white" alt="whitegem">
+                            <img src="assets/images/whitegem.jpg"  class="card-img-top-white" alt="whitegem">
                             <div class="card-body">
-                              <h5 class="card-title">White Gem:</h5>
+                              <h5 class="card-title"><button type="button" class="btn btn-light" id = "white-btn">White Gem:</button></h5>
                               <div id ="card-text-white"></div>
                             </div>
                     </div>
