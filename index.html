@@ -22,8 +22,10 @@
                 <style>
                     body   {
                         background-image:url("assets/images/crystalmine.jpg");
-                        background-repeat:no repeat;
+                        background-repeat:no-repeat;
                         background-size:cover;
+                        background-attachment: fixed;
+                        background-position: center center;
                     }
                 </style>
                     <h1 class="display-4">Welcome to the Crystal Collector Game!!</h1>
@@ -47,14 +49,14 @@
                     <img src="assets/images/bluegem.jpg"  class="card-img-top-blue" alt="bluegem">
                         <div class="card-body">
                             <h5 class="card-title"><button type="button" class="btn btn-primary" id = "blue-btn">Blue Gem:</button></h5>
-                            <div id ="card-text-blue" ></div>
+                            <div id ="card-text-blue" >____________________</div>
                         </div>
                 </div>
                 <div class="card">
                     <img src="assets/images/greengem.jpg"  class="card-img-top-green" alt="greengem">
                         <div class="card-body">
                             <h5 class="card-title"><button type="button" class="btn btn-success" id = "green-btn">Green Gem:</button></h5>
-                            <div id = "card-text-green"></div>
+                            <div id = "card-text-green">____________________</div>
                         </div>
                 </div>
             </div>
@@ -67,14 +69,14 @@
                             <img src="assets/images/yellowgem.jpg"  class="card-img-top-purple" alt="yellowgem">
                             <div class="card-body">
                               <h5 class="card-title"><button type="button" class="btn btn-warning" id = "yellow-btn">Yellow Gem:</button></h5>
-                              <div id ="card-text-yellow"></div>
+                              <div id ="card-text-yellow">____________________</div>
                             </div>
                     </div>
                     <div class="card">
                             <img src="assets/images/whitegem.jpg"  class="card-img-top-white" alt="whitegem">
                             <div class="card-body">
                               <h5 class="card-title"><button type="button" class="btn btn-light" id = "white-btn">White Gem:</button></h5>
-                              <div id ="card-text-white"></div>
+                              <div id ="card-text-white">____________________</div>
                             </div>
                     </div>
             </div>
@@ -90,7 +92,8 @@
             <div class = "col-md-2">
                     <div class="card-body">
                             <h5 class="card-title"></h5>
-                        <div id = "playerWins"></div></div>
+                        <div id = "playerWins">Player wins:</div>
+                    </div>
             </div>
             <div class = "col-md-4">
                     <div class="card-body-score">
@@ -107,7 +110,7 @@
             <div class = "col-md-2">
                     <div class="card-body">
                             <h5 class="card-title"></h5>
-                    <div id = "playerLosses"></div>
+                    <div id = "playerLosses">Player losses:</div>
                     </div>
             </div>
         </div>

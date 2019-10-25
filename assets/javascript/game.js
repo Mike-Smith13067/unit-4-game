@@ -100,7 +100,7 @@ $("#green-btn").on("click", function() {
 function gameOver () {
     if (playerScore == targetNumber) {
         $("#playerScore").text(playerScore);
-            alert("Game Over");
+            alert("You win!! Player score equals target value. ");
             playerWins++;
             $ ("#playerWins").text("Player Wins: " + playerWins);
 
@@ -108,7 +108,7 @@ function gameOver () {
     
     if (playerScore > targetNumber) {
         $ ("#playerScore").text(playerScore);
-            alert("Game Over");
+            alert("You Lose! Player score exceeded target value.");
             playerLosses++;
             $("#playerLosses").text("Player Losses: " + playerLosses);
         
@@ -129,49 +129,6 @@ function reset() {
      playerScore = 0;
     $("#playerScore").text(playerScore);}
 
-
-
-
-// if (playerScore == targetNumber) {
-//     //Reset Game Variables
-//     alert ("Correct Value Match");
-
-//     var blueGemGame = 0;
-//     var yellowGemGame = 0;
-//     var whiteGemGame = 0;
-//     var greenGemGame = 0;
-//     var blueGem = 0;
-//     var yellowGem = 0;
-//     var whiteGem = 0;
-//     var greenGem = 0;
-//     var targetNumber =Math.floor(Math.random()*101) +19;
-//     wins++;
-//     $ ("#playerWins").text("Player Wins: " + playerWins);
-
-// }
-// else {
-//     alert ("Incorrect Value Match");
-
-//     var blueGemGame = 0;
-//     var yellowGemGame = 0;
-//     var whiteGemGame = 0;
-//     var greenGemGame = 0;
-//     var blueGem = 0;
-//     var yellowGem = 0;
-//     var whiteGem = 0;
-//     var greenGem = 0;
-//     var targetNumber = Math.floor(Math.random()*101) +19;
-//     losses++;
-//     $("#playerLosses").text("Player Losses: " + playerLosses);
-
-// }
-
-    
-//     //c. Player wins/losses.
-//     var playerWins = 0;
-//     $("#playerWins").text("Player Wins: " + playerWins);
-//     var playerLosses = 0;
-//     $("#playerLosses").text("Player Losses: " + playerLosses);
 
 
 
