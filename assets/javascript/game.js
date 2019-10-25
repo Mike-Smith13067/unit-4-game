@@ -1,9 +1,5 @@
 //                      Crystal Collector Game
 // Psuedocode
-
-
-
-
 //1. Assign/define variables.
     //a. Crystal values.
     var blueGemGame = 0;
@@ -14,18 +10,20 @@
     var yellowGem = 0;
     var whiteGem = 0;
     var greenGem = 0;
-    var targetNumber =0;
-
+    var targetNumber = Math.floor(Math.random()*101) +19;
+    var playerWins = 0;
+    var playerLosses = 0;
+    var playerScore = 0;
     
     
-        
     //d. Target value to be guessed.
         // Randomly generated between 19-120
         // Resets to new value at game start
 
-        var targetNumber = Math.floor(Math.random()*110) +19;
-        console.log (targetNumber);
-        $("#targetNumber").text("Target Value: " + targetNumber);
+    var targetNumber = Math.floor(Math.random()*101) +19;
+    console.log (targetNumber);
+    $("#targetNumber").text(targetNumber);
+    $("#playerScore").text(playerScore);
 
         //random values between 1-12.
     
@@ -35,103 +33,145 @@
 $("#blue-btn").on("click", function() {
     if (blueGem == 0) {
         blueGem = Math.floor(Math.random()*11) + 1;
-        $ ("#card-text-blue").text ("Current Value: " + blueGem);
-}
+        $ ("#card-text-blue").text ("Current Value: " + blueGem);}
     else {
         blueGemGame += blueGem;
         console.log (blueGemGame + "bg");
+    
+         playerScore = blueGemGame + yellowGemGame + whiteGemGame + greenGemGame;
+        $("#playerScore").text(playerScore);
+    console.log (playerScore); 
+    gameOver ();
     }
-    var playerScore = 0;
-    var playerScore = blueGemGame + yellowGemGame + whiteGemGame + greenGemGame;
-    $ ("#playerScore").text("Current Score: " + playerScore);
-    console.log (playerScore);
+           
 })
 //      **********************YELLOW GEM**********************
 
 $("#yellow-btn").on("click", function() {
     if (yellowGem == 0) {
         yellowGem = Math.floor(Math.random()*11) + 1;
-        $ ("#card-text-yellow").text ("Current Value: " + yellowGem);
-    }
+        $ ("#card-text-yellow").text ("Current Value: " + yellowGem);}
         else {
             yellowGemGame += yellowGem;
-            console.log (yellowGemGame + "yg");
-        }
-        var playerScore = 0;
-        var playerScore = blueGemGame + yellowGemGame + whiteGemGame + greenGemGame;
-        $ ("#playerScore").text("Current Score: " + playerScore);
+            console.log (yellowGemGame + "yg");}
+        
+         playerScore = blueGemGame + yellowGemGame + whiteGemGame + greenGemGame;
+        $ ("#playerScore").text(playerScore);
         console.log (playerScore);
+
+        gameOver();
+
+          
     })
 //      *********************WHITE GEM*****************************
 $("#white-btn").on("click", function() {
     if (whiteGem == 0) {
         whiteGem = Math.floor(Math.random()*11) + 1;
-        $ ("#card-text-white").text ("Current Value: " + whiteGem);
-}
+        $ ("#card-text-white").text ("Current Value: " + whiteGem);}
     else {
-        whiteGemGame += whiteGem;
-    }
-    var playerScore = 0;
-    var playerScore = blueGemGame + yellowGemGame + whiteGemGame + greenGemGame;
-    $ ("#playerScore").text("Current Score: " + playerScore);
+        whiteGemGame += whiteGem;}
+ 
+     playerScore = blueGemGame + yellowGemGame + whiteGemGame + greenGemGame;
+    $ ("#playerScore").text(playerScore);
     console.log (playerScore);
+
+    gameOver();
+    
+
+    
 })
 //******************************GREEN GEM***************************
 $("#green-btn").on("click", function() {
     if (greenGem == 0) {
         greenGem = Math.floor(Math.random()*11) + 1;
-        $ ("#card-text-green").text ("Current Value: " + greenGem);
-}
+        $ ("#card-text-green").text ("Current Value: " + greenGem);}
     else {
-        greenGemGame += greenGem;
-    }
-    var playerScore = 0;
-    var playerScore = blueGemGame + yellowGemGame + whiteGemGame + greenGemGame;
-    $ ("#playerScore").text("Current Score: " + playerScore);
+        greenGemGame += greenGem;}
+ 
+     playerScore = blueGemGame + yellowGemGame + whiteGemGame + greenGemGame;
+    $ ("#playerScore").text(playerScore);
     console.log (playerScore);
 
+    gameOver ();
+   
    
 })
-if (playerScore == targetNumber) {
-    //Reset Game Variables
-    alert ("Correct Value Match");
 
-    var blueGemGame = 0;
-    var yellowGemGame = 0;
-    var whiteGemGame = 0;
-    var greenGemGame = 0;
-    var blueGem = 0;
-    var yellowGem = 0;
-    var whiteGem = 0;
-    var greenGem = 0;
-    var targetNumber =Math.floor(Math.random()*110) +19;
-    wins++;
-    $ ("#playerWins").text("Player Wins: " + playerWins);
+function gameOver () {
+    if (playerScore == targetNumber) {
+        $("#playerScore").text(playerScore);
+            alert("Game Over");
+            playerWins++;
+            $ ("#playerWins").text("Player Wins: " + playerWins);
 
-}
-else {
-    alert ("Correct Value Match");
+        reset();}
+    
+    if (playerScore > targetNumber) {
+        $ ("#playerScore").text(playerScore);
+            alert("Game Over");
+            playerLosses++;
+            $("#playerLosses").text("Player Losses: " + playerLosses);
+        
+        reset();}
+    }
 
-    var blueGemGame = 0;
-    var yellowGemGame = 0;
-    var whiteGemGame = 0;
-    var greenGemGame = 0;
-    var blueGem = 0;
-    var yellowGem = 0;
-    var whiteGem = 0;
-    var greenGem = 0;
-    var targetNumber = Math.floor(Math.random()*110) +19;
-    losses++;
-    $ ("#playerLosses").text("Player Losses: " + playerLosses);
+function reset() {
+     blueGemGame = 0;
+     yellowGemGame = 0;
+     whiteGemGame = 0;
+     greenGemGame = 0;
+     blueGem = 0;
+     yellowGem = 0;
+     whiteGem = 0;
+     greenGem = 0;
+     targetNumber = Math.floor(Math.random()*101) +19;
+     $("#targetNumber").text(targetNumber);
+     playerScore = 0;
+    $("#playerScore").text(playerScore);}
 
-}
+
+
+
+// if (playerScore == targetNumber) {
+//     //Reset Game Variables
+//     alert ("Correct Value Match");
+
+//     var blueGemGame = 0;
+//     var yellowGemGame = 0;
+//     var whiteGemGame = 0;
+//     var greenGemGame = 0;
+//     var blueGem = 0;
+//     var yellowGem = 0;
+//     var whiteGem = 0;
+//     var greenGem = 0;
+//     var targetNumber =Math.floor(Math.random()*101) +19;
+//     wins++;
+//     $ ("#playerWins").text("Player Wins: " + playerWins);
+
+// }
+// else {
+//     alert ("Incorrect Value Match");
+
+//     var blueGemGame = 0;
+//     var yellowGemGame = 0;
+//     var whiteGemGame = 0;
+//     var greenGemGame = 0;
+//     var blueGem = 0;
+//     var yellowGem = 0;
+//     var whiteGem = 0;
+//     var greenGem = 0;
+//     var targetNumber = Math.floor(Math.random()*101) +19;
+//     losses++;
+//     $("#playerLosses").text("Player Losses: " + playerLosses);
+
+// }
 
     
-    //c. Player wins/losses.
-    var playerWins = 0;
-    document.getElementById ("playerWins").textContent="Player Wins: " + playerWins;
-    var playerLosses = 0;
-    document.getElementById ("playerLosses").textContent="Player Losses: " + playerLosses;
+//     //c. Player wins/losses.
+//     var playerWins = 0;
+//     $("#playerWins").text("Player Wins: " + playerWins);
+//     var playerLosses = 0;
+//     $("#playerLosses").text("Player Losses: " + playerLosses);
 
 
 

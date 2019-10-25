@@ -1,4 +1,6 @@
-
+* {
+    box-sizing: border-box;
+}
 .gameheader {
     position: absolute;
     left: 19%;
@@ -10,46 +12,54 @@
     border: 5px solid white;
 }
 
-.card-img-top {
-    height: 200px;
-    width: 450px;
-}
-
 .card-img-top-blue {
     height: 200px;
-    width: 200px;
+    width: 100%;
 }
 
 .card-img-top-purple {
     height: 200px;
-    width: 200px;
+    width: 100%;
 }
 
 .card-img-top-green {
     height: 200px;
-    width: 200px;
+    width: 100%;
 }
 
 .card-img-top-white {
     height: 200px;
-    width: 200px;
+    width: 100%;
 }
 
 .card-body {
     position: relative;
     background-color: black;
     color: red;
-    width: 200px;
-    border: 5px solid black;
+    width: 100%;
+    border: 5px solid white;
 
 }
 .card-body-score{
     position: relative;
-    left: 30%;
+    left: 0%;
     background-color: white;
-    width: 200px;
+    width: 100%;
     height: 90px;
     border: 5px solid black;
+}
+
+.col-md-8 {
+    position: absolute;
+    padding: 0px 0px 0px 0px ;
+
+}
+
+#playerScore {
+    font-size: 20px;
+}
+#targetNumber {
+    font-size: 20px;
 }
 
 

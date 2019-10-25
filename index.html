@@ -29,9 +29,10 @@
                     <h1 class="display-4">Welcome to the Crystal Collector Game!!</h1>
                     <!--b. Directions/Instructions-->
                     <p class="lead">Directions:</p>
-                    <p1>1. Using the colored gems below achieve the required score.</p1><br>
-                    <p1>2. Random values will be assigned one the crystal is clicked.</p1><br>
-                    <p1>3. Player wins/losses will be tracked until webpage is reset.</p1><br>
+                    <p1>1. Using the colored gems try to achieve the required score.</p1><br>
+                    <p1>2. Random values will be assigned to each crystal once the crystal is clicked.</p1><br>
+                    <p1>3. After game wiin/loss gems will need to be re-clicked to assign new values</p1><br>
+                    <p1>4. Player wins/losses will be tracked until webpage is reset.</p1><br>
                     <hr class="cancel">
                     <p1>Click 'Cancel' to exit game and see the latest sports news.</p1><br>
                     <a class="btn btn-danger btn-lg " href="https://www.espn.com/" role="button">Cancel</a>
@@ -42,14 +43,14 @@
     <container1 class = "container1">
         <div class = "row">
             <div class="col-md-2">
-                <div class="card" style="width: 10rem;">
+                <div class="card">
                     <img src="assets/images/bluegem.jpg"  class="card-img-top-blue" alt="bluegem">
                         <div class="card-body">
                             <h5 class="card-title"><button type="button" class="btn btn-primary" id = "blue-btn">Blue Gem:</button></h5>
                             <div id ="card-text-blue" ></div>
                         </div>
                 </div>
-                <div class="card" style="width: 10rem;">
+                <div class="card">
                     <img src="assets/images/greengem.jpg"  class="card-img-top-green" alt="greengem">
                         <div class="card-body">
                             <h5 class="card-title"><button type="button" class="btn btn-success" id = "green-btn">Green Gem:</button></h5>
@@ -62,14 +63,14 @@
             </div>
 
             <div class="col-md-2">
-                    <div class="card" style="width: 10rem;">
+                    <div class="card">
                             <img src="assets/images/yellowgem.jpg"  class="card-img-top-purple" alt="yellowgem">
                             <div class="card-body">
                               <h5 class="card-title"><button type="button" class="btn btn-warning" id = "yellow-btn">Yellow Gem:</button></h5>
                               <div id ="card-text-yellow"></div>
                             </div>
                     </div>
-                    <div class="card" style="width: 10rem;">
+                    <div class="card">
                             <img src="assets/images/whitegem.jpg"  class="card-img-top-white" alt="whitegem">
                             <div class="card-body">
                               <h5 class="card-title"><button type="button" class="btn btn-light" id = "white-btn">White Gem:</button></h5>
@@ -93,13 +94,13 @@
             </div>
             <div class = "col-md-4">
                     <div class="card-body-score">
-                            <h5 class="card-title"></h5>
+                            <h5 class="card-title">Player Score: </h5>
                         <div id = "playerScore"></div>
                     </div>
             </div>
             <div class = "col-md-4">
                     <div class="card-body-score">
-                            <h5 class="card-title"></h5>
+                            <h5 class="card-title">Target Value:</h5>
                         <div id = "targetNumber"></div>
                     </div>
             </div>
